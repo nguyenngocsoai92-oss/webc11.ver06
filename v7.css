@@ -1,0 +1,43 @@
+.grid-2,.grid-3,.main,.content-section,.panel,.table-wrap{min-width:0;max-width:100%}.admin .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.v7-auth{display:flex;gap:8px;flex-shrink:0}.d-header .d-nav{flex-wrap:wrap;padding-block:12px}.v7-partner-logo{position:static;flex-shrink:0}.v7-partner-logo img{max-width:90px;max-height:50px}.v7-overview{columns:2;column-gap:60px}.v7-overview section{break-inside:avoid;margin-bottom:40px}.v7-overview h3{color:#850001}.v7-founders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.v7-founders img,.v7-no-photo{width:100%;aspect-ratio:4/5;object-fit:cover;background:#f0eaed}.v7-no-photo{display:grid;place-items:center;color:#71656a}.d-footer section{max-width:620px}.d-footer section>a{display:block;margin:8px 0}.v7-refresh{position:fixed;bottom:16px;left:16px;z-index:9999;padding:14px;background:#fff;border:1px solid #850001;box-shadow:0 5px 20px #0002}.v7-public-flow{background:#f8f6f6!important}.v7-public-flow .hero{background:#850001!important;color:white}.v7-public-flow .hero h1{font-size:clamp(28px,4vw,48px)}.v7-public-flow .d-header{background:white}.d-member-card img{object-fit:cover;width:100%}.d-footer .d-wrap{gap:40px}.v7-overview p,.v7-overview li{line-height:1.75}
+@media(max-width:800px){.admin .grid-2{grid-template-columns:minmax(0,1fr)}.v7-overview{columns:1}.v7-auth .d-button{font-size:12px;padding:10px}.v7-founders{grid-template-columns:minmax(0,1fr)}.d-nav{gap:10px}.v7-partner-logo img{max-width:60px;max-height:36px}.sidebar{max-height:280px;overflow:auto}.d-footer .d-wrap{display:block}.d-footer section+section{margin-top:30px}}
+/* The shared navigation is also used by legacy guest screens, without design-page. */
+.d-header [hidden]{display:none!important}
+.v7-public-flow :is(.d-header,.d-top){--wine:#850001;--deep:#850001;--cream:#faf7f3;--ink:#282530;--muted:#6d6970;--line:#e9e2df;font-family:Arial,"Helvetica Neue",sans-serif;line-height:1.65}
+.v7-public-flow .d-header *{box-sizing:border-box}
+.v7-public-flow .d-header a{text-decoration:none}
+.v7-public-flow .d-header .d-menu-intro h3{margin:0;color:var(--wine);font:700 25px/1.35 Arial,sans-serif}
+.v7-public-flow .d-header .d-menu-intro p{font-size:13px;color:var(--muted);margin:12px 0}
+.v7-public-flow .d-header .d-menu-links a{color:var(--ink)}
+.v7-public-flow .d-header button{font-family:inherit;cursor:pointer}
+.v7-public-flow .d-top a{color:#fff;text-decoration:none}
+.v7-public-flow .d-header :focus-visible{outline:2px solid #850001;outline-offset:4px}
+/* Framed, bold navigation shared by V7. */
+.d-header #d-navigation{gap:8px}
+.d-header #d-navigation>a,.d-header .d-nav-trigger{font-weight:750;font-size:12px;border:1px solid #d8b3be;border-radius:7px;padding:12px 13px;min-height:44px;justify-content:center;background:#fff;transition:background .15s,border-color .15s,color .15s}
+.d-header #d-navigation>a:hover,.d-header .d-nav-trigger:hover,.d-header .d-nav-trigger[aria-expanded=true]{background:#f8edf1;border-color:#850001;color:#850001;box-shadow:none}
+.d-header .d-menu-links strong{font-weight:750}
+/* Shared large logos and two-row navigation across V7. */
+body .d-header .d-nav{display:grid;grid-template-columns:244px minmax(0,1fr) 180px;gap:14px 24px;padding-block:18px}
+body .d-header .d-brand{grid-column:1;grid-row:1;width:244px;align-items:flex-start}
+body .d-header .d-brand img{max-width:244px;max-height:136px;object-fit:contain}
+body .d-header .v7-partner-logo{grid-column:3;grid-row:1;justify-self:end}
+body .d-header .v7-partner-logo img{display:block;max-width:180px;max-height:100px;object-fit:contain}
+body .d-header .v7-auth{grid-column:2;grid-row:1;justify-self:center}
+body .d-header #d-navigation{grid-column:1/-1;grid-row:2;justify-content:center;padding-top:14px;border-top:1px solid #efdee3}
+@media(max-width:1000px){
+.d-header #d-navigation>a,.d-header .d-nav-trigger{justify-content:space-between;margin-bottom:8px;width:100%;font-size:14px;padding:12px 14px}
+body .d-header .d-nav{grid-template-columns:minmax(0,1fr) auto;gap:12px;padding-block:14px}
+body .d-header .d-brand{width:170px;max-width:100%;grid-column:1;grid-row:1}
+body .d-header .d-brand img{max-width:170px;max-height:110px;width:100%;object-fit:contain}
+body .d-header .v7-partner-logo{grid-column:2;grid-row:1}
+body .d-header .v7-partner-logo img{max-width:120px;max-height:72px}
+body .d-header .v7-auth{grid-column:1;grid-row:2;justify-self:start;gap:6px}
+body .d-header .v7-auth .d-button{font-size:11px;padding:9px 8px}
+body .d-header .d-mobile-toggle{grid-column:2;grid-row:2;justify-self:end;margin:0}
+body .d-header #d-navigation{padding:16px 24px;border-top:1px solid #efdee3;grid-row:auto}
+}
+
+.d-header #d-navigation>a[aria-current="page"],.d-header .d-nav-trigger[data-current="true"]{background:#850001;color:#fff;border-color:#850001;box-shadow:0 3px 10px #821d361c}
+
+/* Financial summary cards stay balanced on desktop and mobile. */
+#financeBoard>.v6-kpis,#section-finance>.v6-kpis,#roleFinanceV7>.v6-kpis{grid-template-columns:repeat(4,minmax(0,1fr));margin:20px 0}#financeBoard .kpi,#section-finance .kpi,#roleFinanceV7 .kpi{min-width:0;overflow-wrap:anywhere}@media(max-width:700px){#financeBoard>.v6-kpis,#section-finance>.v6-kpis,#roleFinanceV7>.v6-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
